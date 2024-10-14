@@ -1,8 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Image from "@ui/image";
+import { ImageType } from "@utils/types";
 import cn from "clsx";
 
-const TimelineCard = ({ title, subtitle, rating, desc, layout, className }) => {
+const TimelineCard = ({
+    title,
+    subtitle,
+    images,
+    url,
+    desc,
+    layout,
+    className,
+}) => {
     return (
         <div className={cn("resume-single-list", className)}>
             <div
@@ -12,17 +22,30 @@ const TimelineCard = ({ title, subtitle, rating, desc, layout, className }) => {
                 )}
             >
                 <div className="heading">
+                    {images?.[0]?.src && (
+                        <Image
+                            src={images[0].src}
+                            alt={images[0]?.alt || title}
+                            style={{
+                                width: "60px",
+                                height: "60px",
+                                objectFit: "cover",
+                            }}
+                        />
+                    )}
                     <div className="title">
                         <h4>{title}</h4>
                         <span>{subtitle}</span>
                     </div>
-                    {rating && (
-                        <div className="date-of-time">
-                            <span>{rating}</span>
-                        </div>
+                    {url && (
+                        <a href={url} className="date-of-time ms-auto">
+                            <span>View Credential</span>
+                        </a>
                     )}
                 </div>
-                <p className="description">{desc}</p>
+                <p className="description" style={{ textAlign: "justify" }}>
+                    {desc}
+                </p>
             </div>
         </div>
     );
@@ -31,7 +54,7 @@ const TimelineCard = ({ title, subtitle, rating, desc, layout, className }) => {
 TimelineCard.propTypes = {
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
-    rating: PropTypes.string,
+    images: PropTypes.arrayOf(PropTypes.shape(ImageType)),
     desc: PropTypes.string.isRequired,
     className: PropTypes.string,
     layout: PropTypes.oneOf([1, 2]),

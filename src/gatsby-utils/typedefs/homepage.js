@@ -44,8 +44,9 @@ type Item {
     icon: String,
 	texts: [Text]
 	stringList: [String]
-	likeCount: Int
+	date: String
 	rating: String
+	url: String
 	value: Int
 	designation: String
 	projectTitle: String

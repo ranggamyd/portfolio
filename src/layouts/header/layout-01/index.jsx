@@ -8,8 +8,9 @@ import BurgerButton from "@ui/burger-button";
 import Button from "@ui/button";
 import { useSticky, useOffcanvas } from "@hooks";
 import { ImageType, ButtonType, MenuType, SocialType } from "@utils/types";
+import { Moon, Sun } from "react-feather";
 
-const Header = ({ className, data }) => {
+const Header = ({ className, data, theme, toggleTheme }) => {
     const sticky = useSticky();
     const { offcanvas, offcanvasHandler } = useOffcanvas();
 
@@ -50,15 +51,17 @@ const Header = ({ className, data }) => {
                                     />
                                 )}
                                 <div className="header-right">
-                                    {data?.button && (
-                                        <Button
-                                            path={data.button?.path}
-                                            className={data.button?.className}
-                                        >
-                                            <span>{data.button?.content}</span>
-                                        </Button>
-                                    )}
-
+                                    <Button
+                                        path="#"
+                                        onClick={toggleTheme}
+                                        className="theme-toggle"
+                                    >
+                                        {theme === "white-version" ? (
+                                            <Sun className="icon rotate" />
+                                        ) : (
+                                            <Moon className="icon rotate" />
+                                        )}
+                                    </Button>
                                     <BurgerButton
                                         className="d-block d-xl-none"
                                         onClick={offcanvasHandler}

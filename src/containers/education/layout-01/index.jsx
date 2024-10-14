@@ -28,7 +28,7 @@ const EducationArea = ({ data, id }) => {
                                             key={item.id}
                                             title={item.title}
                                             subtitle={item.subtitle}
-                                            rating={item.rating}
+                                            images={item.images}
                                             desc={item.description}
                                         />
                                     ))}

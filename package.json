@@ -1,11 +1,19 @@
 {
-  "name": "inbio-gatsby",
+  "name": "myds-portfolio",
   "version": "1.0.0",
   "private": true,
-  "description": "inbio-gatsby",
-  "author": "Rainbow IT",
+  "description": "myds-portfolio",
+  "author": "Rangga Myd",
   "keywords": [
-    "gatsby"
+    "Rangga",
+    "Portfolio",
+    "Developer",
+    "Fullstack Developer",
+    "Front-end Developer",
+    "Back-end Developer",
+    "Software Developer",
+    "Cloud Engineer",
+    "Cloud Architect"
   ],
   "scripts": {
     "develop": "gatsby develop",

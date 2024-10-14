@@ -61,23 +61,21 @@ const PortfolioModal = ({
                     <div className="col-lg-6">
                         <div className="text-content">
                             <h3>
-                                <span>Featured - {category}</span> {title}
+                                <span>{category}</span> {title}
                             </h3>
                             {texts?.map((text, i) => (
                                 <p
                                     className={
                                         i !== texts.length - 1 ? "mb--30" : ""
                                     }
+                                    style={{ textAlign: "justify" }}
                                     key={i}
-                                >
-                                    {text.content}
-                                </p>
+                                    dangerouslySetInnerHTML={{
+                                        __html: text.content,
+                                    }}
+                                />
                             ))}
                             <div className="button-group mt--20">
-                                <Button path={path} className="thumbs-icon">
-                                    <span>LIKE THIS</span>
-                                    <ThumbsUp />
-                                </Button>
                                 <Button path={path}>
                                     <span>VIEW PROJECT</span>
                                     <ChevronRight />

@@ -42,7 +42,7 @@ const ContactInfoCard = ({
             </div>
             {socials && (
                 <div className="social-area">
-                    <div className="name">FIND WITH ME</div>
+                    <div className="name">Let's Connect With Me</div>
                     <Social className="social-icone">
                         {socials.map((social) => (
                             <SocialLink key={social.id} path={social.path}>

@@ -232,9 +232,10 @@
                 .heading {
                     display: flex;
                     align-items: center;
-                    justify-content: space-between;
+                    justify-content: start;
+                    gap: 30px;
                     border-bottom: 1px solid #1a1d23;
-                    padding-bottom: 20px;
+                    padding-bottom: 25px;
                     margin-bottom: 20px;
 
                     @media #{$lg-layout} {
@@ -246,7 +247,7 @@
                     }
 
                     .title {
-                        margin-bottom: 15px;
+                        margin-bottom: 5px;
 
                         h4 {
                             color: var(--color-lightn);

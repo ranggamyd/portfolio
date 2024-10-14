@@ -25,9 +25,10 @@ export const query = graphql`
             }
             alt
         }
-        likeCount
+        date
         designation
         rating
+        url
         projectTitle
         projectMeta
         timeRange

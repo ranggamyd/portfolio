@@ -22,6 +22,7 @@ export const query = graphql`
             title
             subtitle
             rating
+            url
             description
             value
             path

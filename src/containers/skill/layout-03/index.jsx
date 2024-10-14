@@ -4,7 +4,7 @@ import Image from "@ui/image";
 import SectionTitle from "@components/section-title";
 import { ItemType, SectionTitleType } from "@utils/types";
 
-const SkillArea = ({ data, id }) => {
+const SkillArea3 = ({ data, id }) => {
     return (
         <div id={id} className="rn-skill-area rn-section-gap section-separator">
             <div className="container">
@@ -51,7 +51,7 @@ const SkillArea = ({ data, id }) => {
     );
 };
 
-SkillArea.propTypes = {
+SkillArea3.propTypes = {
     id: PropTypes.string,
     data: PropTypes.shape({
         section_title: PropTypes.shape(SectionTitleType),
@@ -59,8 +59,8 @@ SkillArea.propTypes = {
     }),
 };
 
-SkillArea.defaultProps = {
+SkillArea3.defaultProps = {
     id: "skill",
 };
 
-export default SkillArea;
+export default SkillArea3;

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-const Image = ({ src, alt, className }) => {
+const Image = ({ src, alt, className, style }) => {
     let boxImage;
     if (typeof src === "object") {
         boxImage = (
@@ -10,10 +10,18 @@ const Image = ({ src, alt, className }) => {
                 image={getImage(src)}
                 alt={alt}
                 className={className}
+                style={style}
             />
         );
     } else {
-        boxImage = <img src={src} alt={alt} className={className} />;
+        boxImage = (
+            <img
+                src={src}
+                alt={alt}
+                className={className}
+                style={style}
+            />
+        );
     }
     return boxImage;
 };

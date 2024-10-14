@@ -43,7 +43,7 @@ const ContactForm = ({ className, url }) => {
             data,
         })
             .then((_res) => {
-                handleServerResponse(true, "Thanks! for being with us", form);
+                handleServerResponse(true, "Thanks for having me!", form);
             })
             .catch((err) => {
                 handleServerResponse(false, err.response.data.error, form);
@@ -60,7 +60,7 @@ const ContactForm = ({ className, url }) => {
                 >
                     <div className="col-lg-6">
                         <FormGroup>
-                            <Label htmlFor="name">Your Name</Label>
+                            <Label htmlFor="name">Full Name</Label>
                             <Input
                                 name="name"
                                 id="name"
@@ -94,7 +94,7 @@ const ContactForm = ({ className, url }) => {
 
                     <div className="col-lg-12">
                         <FormGroup>
-                            <Label htmlFor="email">Email</Label>
+                            <Label htmlFor="email">Email Address</Label>
                             <Input
                                 id="email"
                                 name="email"
@@ -132,7 +132,7 @@ const ContactForm = ({ className, url }) => {
 
                     <div className="col-lg-12">
                         <FormGroup>
-                            <Label htmlFor="message">Your Message</Label>
+                            <Label htmlFor="message">Message</Label>
                             <Textarea
                                 name="message"
                                 id="message"

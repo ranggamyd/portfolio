@@ -1,4 +1,3 @@
-import * as React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import { normalizedData } from "@utils";
@@ -6,30 +5,42 @@ import Layout from "@layout";
 import Header from "@layout/header/layout-01";
 import Footer from "@layout/footer/layout-01";
 import HeroArea from "@containers/hero/layout-01";
-import ServicesArea from "@containers/service/layout-01";
 import PortfolioArea from "@containers/portfolio/layout-01";
 import ResumeArea from "@containers/resume/layout-01";
-import TestimonialArea from "@containers/testimonial/layout-01";
 import ClientArea from "@containers/client/layout-01";
-import PricingArea from "@containers/pricing/layout-01";
-import BlogArea from "@containers/blog/layout-01";
 import ContactArea from "@containers/contact/layout-01";
 import EducationArea from "@containers/education/layout-01";
 import SkillArea from "@containers/skill/layout-01";
+import SkillArea3 from "@containers/skill/layout-03";
 import ExperienceArea from "@containers/experience/layout-01";
-import InterviewArea from "@containers/interview/layout-01";
+import CertificateArea from "@containers/certificate/layout-01";
+import React, { useState, useEffect } from "react";
 
 const IndexPage = ({ data }) => {
     const content = normalizedData(data?.homePage?.content || []);
 
+    const [theme, setTheme] = useState("");
+
+    useEffect(() => {
+        setTheme(localStorage.getItem("theme") || "");
+    }, []);
+
+    const toggleTheme = () => {
+        const newTheme = theme === "" ? "white-version" : "";
+        setTheme(newTheme);
+        localStorage.setItem("theme", newTheme);
+    };
+
     return (
-        <Layout pageTitle="Home Default">
+        <Layout pageTitle="Home" className={theme}>
             <Header
                 data={{
                     ...data.header,
                     ...data.navigation,
                     socials: data.site.siteMetadata.socials,
                 }}
+                theme={theme}
+                toggleTheme={toggleTheme}
             />
             <main className="main-page-wrapper">
                 <HeroArea
@@ -38,23 +49,15 @@ const IndexPage = ({ data }) => {
                         socials: data.site.siteMetadata.socials,
                     }}
                 />
-                <ServicesArea data={content["service-section"]} />
+                <SkillArea3 data={content["skill-section3"]} />
                 <PortfolioArea data={content["portfolio-section"]} />
                 <ResumeArea data={content["resume-section"]}>
                     <EducationArea data={content["education-section"]} />
                     <SkillArea data={content["skill-section"]} />
                     <ExperienceArea data={content["experience-section"]} />
-                    <InterviewArea data={content["interview-section"]} />
+                    <CertificateArea data={content["certificate-section"]} />
                 </ResumeArea>
-                <TestimonialArea data={content["testimonial-section"]} />
                 <ClientArea data={content["client-section"]} />
-                <PricingArea data={content["pricing-section"]} />
-                <BlogArea
-                    data={{
-                        ...content["blog-section"],
-                        blogs: data?.allArticle?.nodes,
-                    }}
-                />
                 <ContactArea
                     data={{
                         ...content["contact-section"],

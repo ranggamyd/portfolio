@@ -76,3 +76,41 @@
 @import "elements/_slickstyle.scss";
 @import "elements/_home-classic.scss";
 @import "elements/_white-version.scss";
+
+::-webkit-scrollbar {
+    width: 8px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background: none !important;
+}
+::-webkit-scrollbar-thumb {
+    background: #fd4520;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 51, 51, 0.925);
+}
+
+.theme-toggle {
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover .icon.rotate {
+    color: white;
+    transform: rotate(270deg);
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+.icon.rotate {
+    animation: rotateIcon 0.5s ease-out;
+}

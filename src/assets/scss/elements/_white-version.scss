@@ -368,6 +368,17 @@ body.white-version {
             }
         }
     }
+    .skill-style-1 {
+        li {
+            box-shadow: var(--shadow-white-3);
+            background: var(--gradient-box-w);
+            &:hover {
+                &:before {
+                    opacity: 0;
+                }
+            }
+        }
+    }
 
     &.home-classic {
         // slider

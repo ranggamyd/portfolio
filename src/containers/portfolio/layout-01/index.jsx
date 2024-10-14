@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import SectionTitle from "@components/section-title";
 import PortfolioCard from "@components/portfolio-card/layout-01";
+import Button from "@ui/button";
 import { ItemType, SectionTitleType } from "@utils/types";
 
 const PortfolioArea = ({ data, id }) => {
@@ -35,12 +36,27 @@ const PortfolioArea = ({ data, id }) => {
                                 title={item.title}
                                 category={item.category}
                                 path={item.path}
-                                likeCount={item.likeCount}
+                                date={item.date}
                                 image={item.images?.[0]}
                                 texts={item.texts}
                             />
                         </div>
                     ))}
+                    {data?.buttons && (
+                        <div className="text-center mt--50">
+                            {data.buttons?.map(
+                                ({ id, path, className, content }) => (
+                                    <Button
+                                        key={id}
+                                        path={path}
+                                        className={`mx-3 ${className}`}
+                                    >
+                                        {content}
+                                    </Button>
+                                )
+                            )}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>

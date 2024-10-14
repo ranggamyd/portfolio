@@ -6,7 +6,7 @@ import Anchor from "@ui/anchor";
 import Icon from "@ui/icon";
 import PortfolioModal from "@components/modal-portfolio";
 
-const PortfolioCard = ({ title, category, likeCount, image, path, texts }) => {
+const PortfolioCard = ({ title, category, date, image, path, texts }) => {
     const [show, setShow] = useState(false);
     return (
         <>
@@ -19,33 +19,17 @@ const PortfolioCard = ({ title, category, likeCount, image, path, texts }) => {
             >
                 <div className="inner">
                     <div className="thumbnail">
-                        <Anchor path={path}>
-                            <Image src={image.src} alt={image?.alt || title} />
-                        </Anchor>
+                        <Image src={image.src} alt={image?.alt || title} />
                     </div>
                     <div className="content">
                         <div className="category-info">
-                            <div className="category-list">
-                                <Anchor path={path}>{category}</Anchor>
-                            </div>
+                            <div className="category-list">{category}</div>
                             <div className="meta">
-                                <span>
-                                    <button type="button">
-                                        <Icon
-                                            name="Heart"
-                                            size={13}
-                                            strokeWidth={3}
-                                        />{" "}
-                                        {likeCount && likeCount}
-                                    </button>
-                                </span>
+                                <span>{date && date}</span>
                             </div>
                         </div>
                         <h4 className="title">
-                            <Anchor path={path}>
-                                {title}
-                                <Icon name="ArrowUpRight" />
-                            </Anchor>
+                            {title} <Icon name="ArrowUpRight" />
                         </h4>
                     </div>
                 </div>
@@ -66,7 +50,7 @@ const PortfolioCard = ({ title, category, likeCount, image, path, texts }) => {
 PortfolioCard.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
-    likeCount: PropTypes.number,
+    date: PropTypes.string,
     image: PropTypes.shape(ImageType).isRequired,
     path: PropTypes.string.isRequired,
     texts: PropTypes.arrayOf(PropTypes.shape(TextType)),

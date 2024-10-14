@@ -29,7 +29,7 @@ const PopupMenu = ({ isOpen, onClick, menus, socials, slogan, logo }) => {
 
                 {socials && (
                     <div className="social-share-style-1 mt--40">
-                        <span className="title">find with me</span>
+                        <span className="title">Let's Connect With Me</span>
                         <Social>
                             {socials.map((social) => (
                                 <SocialLink key={social.id} path={social.path}>

@@ -26,33 +26,31 @@
 
     .inner {
         .thumbnail {
-            a {
-                display: block;
-                overflow: hidden;
+            display: block;
+            overflow: hidden;
+            border-radius: 10px;
+
+            img {
+                width: 100%;
+                transition: var(--transition);
+                height: auto;
+                object-fit: cover;
+
+                @media #{$md-layout} {
+                    height: inherit;
+                }
+            }
+
+            video {
                 border-radius: 10px;
+                height: 100%;
+                transition: var(--transition);
+                object-fit: cover;
+                width: 100%;
+            }
 
-                img {
-                    width: 100%;
-                    transition: var(--transition);
-                    height: auto;
-                    object-fit: cover;
-
-                    @media #{$md-layout} {
-                        height: inherit;
-                    }
-                }
-
-                video {
-                    border-radius: 10px;
-                    height: 100%;
-                    transition: var(--transition);
-                    object-fit: cover;
-                    width: 100%;
-                }
-
-                @media #{$small-mobile} {
-                    display: inline-flex;
-                }
+            @media #{$small-mobile} {
+                display: inline-flex;
             }
         }
 
@@ -69,15 +67,13 @@
                     flex-wrap: wrap;
                     align-items: center;
 
-                    a {
-                        color: var(--color-primary);
-                        font-weight: 500;
-                        font-family: var(--font-primary);
-                        font-size: 12px;
-                        letter-spacing: 1px;
-                        text-transform: uppercase;
-                        display: block;
-                    }
+                    color: var(--color-primary);
+                    font-weight: 500;
+                    font-family: var(--font-primary);
+                    font-size: 12px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    display: block;
                 }
 
                 .meta {
@@ -111,38 +107,34 @@
             .title {
                 margin: 0;
 
-                a {
+                transition: var(--transition);
+                color: var(--color-lightn);
+                font-weight: 600;
+                font-size: 23px;
+                line-height: 34px;
+                display: inline-block;
+
+                @media #{$small-mobile} {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+
+                svg {
+                    width: 0;
+                    position: relative;
+                    top: 10px;
                     transition: var(--transition);
-                    color: var(--color-lightn);
-                    font-weight: 600;
-                    font-size: 23px;
-                    line-height: 34px;
-                    display: inline-block;
-
-                    @media #{$small-mobile} {
-                        font-size: 20px;
-                        line-height: 30px;
-                    }
-
-                    svg {
-                        width: 0;
-                        position: relative;
-                        top: 10px;
-                        transition: var(--transition);
-                        opacity: 0;
-                    }
+                    opacity: 0;
                 }
 
                 &:hover {
-                    a {
-                        color: var(--color-primary);
+                    color: var(--color-primary);
 
-                        svg {
-                            color: var(--color-primary);
-                            top: 3px;
-                            opacity: 1;
-                            width: 23px;
-                        }
+                    svg {
+                        color: var(--color-primary);
+                        top: 3px;
+                        opacity: 1;
+                        width: 23px;
                     }
                 }
             }
@@ -169,10 +161,8 @@
         }
 
         .thumbnail {
-            a {
-                img {
-                    transform: scale(1.1);
-                }
+            img {
+                transform: scale(1.1);
             }
         }
 

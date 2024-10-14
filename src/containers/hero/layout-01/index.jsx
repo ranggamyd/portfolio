@@ -44,7 +44,7 @@ const HeroArea = ({ data, id }) => {
                                                     id="page-top"
                                                 >
                                                     <span className="cd-headline clip is-full-width">
-                                                        <span>a </span>{" "}
+                                                        <span>I'm a </span>{" "}
                                                         <Typewriter
                                                             words={
                                                                 data.animated_texts
@@ -59,9 +59,14 @@ const HeroArea = ({ data, id }) => {
                                     )}
                                     {data?.texts?.[0] && (
                                         <div>
-                                            <p className="description">
-                                                {data.texts[0].content}
-                                            </p>
+                                            <p
+                                                className="description"
+                                                style={{ textAlign: "justify" }}
+                                                dangerouslySetInnerHTML={{
+                                                    __html: data.texts[0]
+                                                        .content,
+                                                }}
+                                            />
                                         </div>
                                     )}
                                 </div>
@@ -70,7 +75,7 @@ const HeroArea = ({ data, id }) => {
                                         {data?.socials && (
                                             <div className="social-share-inner-left">
                                                 <span className="title">
-                                                    find with me
+                                                    Let's Connect With Me
                                                 </span>
                                                 <Social>
                                                     {data.socials.map(

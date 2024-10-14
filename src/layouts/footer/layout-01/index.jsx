@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import cn from "clsx";
 import Logo from "@components/logo";
 import { ImageType } from "@utils/types";
+import { Link } from "gatsby";
 
 const Footer = ({ className, data }) => {
     return (
@@ -24,7 +25,8 @@ const Footer = ({ className, data }) => {
                                 />
                             )}
                             <p className="description mt--30">
-                                &copy; {new Date().getFullYear()}.
+                                <a href="#">Myd</a> &copy;{" "}
+                                {new Date().getFullYear()}.{" "}
                                 {data?.copyright_text && (
                                     <span
                                         dangerouslySetInnerHTML={{

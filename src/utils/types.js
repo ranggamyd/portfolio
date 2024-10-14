@@ -43,6 +43,7 @@ export const ItemType = {
     path: PropTypes.string,
     images: PropTypes.arrayOf(PropTypes.shape(ImageType)),
     rating: PropTypes.string,
+    url: PropTypes.string,
 };
 
 export const InnerType = {

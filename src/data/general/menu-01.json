@@ -5,42 +5,22 @@
         {
             "id": 1,
             "text": "Home",
-            "path": "home"
+            "path": "/"
         },
         {
             "id": 2,
-            "text": "Features",
-            "path": "features"
+            "text": "Resume",
+            "path": "/resume/"
         },
         {
             "id": 3,
             "text": "Portfolio",
-            "path": "portfolio"
+            "path": "/portfolio/"
         },
         {
             "id": 4,
-            "text": "Resume",
-            "path": "resume"
-        },
-        {
-            "id": 5,
-            "text": "Clients",
-            "path": "clients"
-        },
-        {
-            "id": 6,
-            "text": "Pricing",
-            "path": "pricing"
-        },
-        {
-            "id": 7,
-            "text": "Blog",
-            "path": "blog"
-        },
-        {
-            "id": 8,
             "text": "Contact",
-            "path": "contacts"
+            "path": "/contact/"
         }
     ]
 }
