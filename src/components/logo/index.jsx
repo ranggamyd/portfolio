@@ -10,7 +10,15 @@ const Logo = ({ className, image }) => {
         <div className={cn("logo", className)}>
             <Link to="/">
                 {image?.src && (
-                    <Image src={image.src} alt={image?.alt || "logo"} />
+                    <Image
+                        src={image.src}
+                        alt={image?.alt || "logo"}
+                        style={{
+                            maxWidth: "139px",
+                            maxHeight: "70px",
+                            objectFit: "cover",
+                        }}
+                    />
                 )}
             </Link>
         </div>

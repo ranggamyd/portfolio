@@ -4,7 +4,8 @@ import { normalizedData } from "@utils";
 import Layout from "@layout";
 import Header from "@layout/header/layout-01";
 import Footer from "@layout/footer/layout-01";
-import HeroArea from "@containers/hero/layout-01";
+import HeroArea from "@containers/hero/layout-06";
+import HeroArea2 from "@containers/hero/layout-05";
 import ResumeArea from "@containers/resume/layout-01";
 import ContactArea from "@containers/contact/layout-01";
 import EducationArea from "@containers/education/layout-01";
@@ -12,10 +13,9 @@ import SkillArea from "@containers/skill/layout-01";
 import SkillArea3 from "@containers/skill/layout-03";
 import ExperienceArea from "@containers/experience/layout-01";
 import CertificateArea from "@containers/certificate/layout-01";
-import PortfolioArea from "@containers/portfolio/layout-01";
 import React, { useState, useEffect } from "react";
 
-const ResumePage = ({ data }) => {
+const AboutPage = ({ data }) => {
     const content = normalizedData(data?.homePage?.content || []);
 
     const [theme, setTheme] = useState("");
@@ -42,17 +42,24 @@ const ResumePage = ({ data }) => {
                 toggleTheme={toggleTheme}
             />
             <main className="main-page-wrapper">
-                <div style={{ paddingTop: "110px" }}>
-                    <ResumeArea data={content["resume-section"]}>
-                        <EducationArea data={content["education-section"]} />
-                        <SkillArea data={content["skill-section"]} />
-                        <ExperienceArea data={content["experience-section"]} />
-                        <CertificateArea
-                            data={content["certificate-section"]}
-                        />
-                    </ResumeArea>
-                </div>
-                <PortfolioArea data={content["portfolio-section"]} />
+                <HeroArea data={content["hero-section"]} />
+                <HeroArea2 data={content["about-section"]} />
+                <SkillArea3 data={content["skill-section3"]} />
+                <ResumeArea data={content["resume-section"]}>
+                    <EducationArea data={content["education-section"]} />
+                    <SkillArea data={content["skill-section"]} />
+                    <ExperienceArea data={content["experience-section"]} />
+                    <CertificateArea data={content["certificate-section"]} />
+                </ResumeArea>
+                <ContactArea
+                    data={{
+                        ...content["contact-section"],
+                        socials: data.site.siteMetadata.socials,
+                        phone: data.site.siteMetadata?.contact?.phone,
+                        email: data.site.siteMetadata?.contact?.email,
+                        getform_url: data.site.siteMetadata?.getform_url,
+                    }}
+                />
             </main>
             <Footer data={{ ...data.footer }} className="section-separator" />
         </Layout>
@@ -75,7 +82,7 @@ export const query = graphql`
         footer: general(section: { eq: "footer-1" }) {
             ...Footer01
         }
-        homePage(title: { eq: "default-home" }) {
+        homePage(title: { eq: "default-about" }) {
             content {
                 ...Content01
             }
@@ -88,7 +95,7 @@ export const query = graphql`
     }
 `;
 
-ResumePage.propTypes = {
+AboutPage.propTypes = {
     data: PropTypes.shape({
         site: PropTypes.shape({
             siteMetadata: PropTypes.shape({
@@ -112,4 +119,4 @@ ResumePage.propTypes = {
     }),
 };
 
-export default ResumePage;
+export default AboutPage;

@@ -9,16 +9,21 @@
         },
         {
             "id": 2,
+            "text": "About",
+            "path": "/about/"
+        },
+        {
+            "id": 3,
             "text": "Resume",
             "path": "/resume/"
         },
         {
-            "id": 3,
+            "id": 4,
             "text": "Portfolio",
             "path": "/portfolio/"
         },
         {
-            "id": 4,
+            "id": 5,
             "text": "Contact",
             "path": "/contact/"
         }

@@ -28,7 +28,6 @@ const TimelineCard = ({
                             alt={images[0]?.alt || title}
                             style={{
                                 width: "60px",
-                                height: "60px",
                                 objectFit: "cover",
                             }}
                         />
@@ -38,7 +37,11 @@ const TimelineCard = ({
                         <span>{subtitle}</span>
                     </div>
                     {url && (
-                        <a href={url} className="date-of-time ms-auto">
+                        <a
+                            href={url}
+                            target="_blank"
+                            className="date-of-time ms-auto"
+                        >
                             <span>View Credential</span>
                         </a>
                     )}

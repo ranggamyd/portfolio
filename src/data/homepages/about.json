@@ -1,15 +1,12 @@
 {
-    "title": "default-home",
+    "title": "default-about",
     "content": [
         {
-            "id": "default-home-hero",
+            "id": "default-about-hero",
             "section": "hero-section",
             "headings": [
                 {
-                    "content": "Hey It's Me 👋"
-                },
-                {
-                    "content": "<span>Rangga Myd</span>"
+                    "content": "Rangga Myd"
                 }
             ],
             "animated_texts": [
@@ -17,35 +14,64 @@
                 "Fullstack Developer.",
                 "Cloud Architect."
             ],
+            "images": [
+                {
+                    "src": "../images/bg/bg-image-11.jpg",
+                    "alt": "Personal Portfolio Images"
+                }
+            ],
+            "buttons": [
+                {
+                    "id": 1,
+                    "path": "#contacts",
+                    "className": "shadow-none",
+                    "content": "CONTACT ME"
+                }
+            ]
+        },
+        {
+            "id": "developer-about-hero",
+            "section": "about-section",
+            "headings": [
+                {
+                    "content": "Rangga <span>Myd</span>"
+                },
+                {
+                    "content": "Take a look on my CV:"
+                }
+            ],
             "texts": [
                 {
                     "content": "Recently gained expertise in Cloud Computing learning path through the <strong>Bangkit by Google, GoTo, and Traveloka</strong>, mastering Cloud Services such as GCR, GKE, GCE, etc. Top Graduated Cohort in Front and Back-end development through the <strong>Dicoding X MSIB Batch 3</strong>"
                 }
             ],
-            "skills": [
+            "items": [
                 {
                     "id": 1,
-                    "title": "reactjs",
-                    "image": {
-                        "src": "../images/icons/icons-16.png",
-                        "alt": "ReactJS"
-                    }
+                    "title": "Software Engineer | Cloud Architect",
+                    "icon": "File"
                 },
                 {
                     "id": 2,
-                    "title": "nextjs",
-                    "image": {
-                        "src": "../images/icons/nextjs.png",
-                        "alt": "NextJS"
-                    }
+                    "title": "ranggaamyd@gmail.com",
+                    "icon": "Mail"
                 },
                 {
                     "id": 3,
-                    "title": "laravel",
-                    "image": {
-                        "src": "../images/icons/laravel.png",
-                        "alt": "Laravel"
-                    }
+                    "title": "Cirebon, Indonesia",
+                    "icon": "MapPin"
+                }
+            ],
+            "buttons": [
+                {
+                    "id": 1,
+                    "path": "#",
+                    "content": "PREVIEW CV"
+                },
+                {
+                    "id": 2,
+                    "path": "#contacts",
+                    "content": "CONTACT ME"
                 }
             ],
             "images": [
@@ -56,7 +82,7 @@
             ]
         },
         {
-            "id": "default-home-skills",
+            "id": "default-about-skills",
             "section": "skill-section3",
             "section_title": {
                 "title": "Tech Stacks",
@@ -129,7 +155,7 @@
             ]
         },
         {
-            "id": "default-home-portfolio",
+            "id": "default-about-portfolio",
             "section": "portfolio-section",
             "section_title": {
                 "title": "Awesome Projects",
@@ -279,7 +305,7 @@
             ]
         },
         {
-            "id": "default-home-resume",
+            "id": "default-about-resume",
             "section": "resume-section",
             "section_title": {
                 "title": "Professional Background",
@@ -287,7 +313,7 @@
             }
         },
         {
-            "id": "default-home-education",
+            "id": "default-about-education",
             "section": "education-section",
             "title": "Educations",
             "inner": [
@@ -384,12 +410,12 @@
             ]
         },
         {
-            "id": "default-home-skill",
+            "id": "default-about-skill",
             "section": "skill-section",
             "title": "Professional Skills",
             "inner": [
                 {
-                    "id": "default-home-skill-left",
+                    "id": "default-about-skill-left",
                     "section_title": {
                         "title": "Web Development",
                         "subtitle": "Tech Stacks"
@@ -428,7 +454,7 @@
                     ]
                 },
                 {
-                    "id": "default-home-skill-right",
+                    "id": "default-about-skill-right",
                     "section_title": {
                         "title": "Cloud Services",
                         "subtitle": "DevOps"
@@ -469,12 +495,12 @@
             ]
         },
         {
-            "id": "default-home-experience",
+            "id": "default-about-experience",
             "section": "experience-section",
             "title": "Experiences",
             "inner": [
                 {
-                    "id": "default-home-experience",
+                    "id": "default-about-experience",
                     "section_title": {
                         "title": "Work Experiences",
                         "subtitle": "2020 - 2024"
@@ -521,12 +547,12 @@
             ]
         },
         {
-            "id": "default-home-certificate",
+            "id": "default-about-certificate",
             "section": "certificate-section",
             "title": "Certificates",
             "inner": [
                 {
-                    "id": "default-home-certificate",
+                    "id": "default-about-certificate",
                     "section_title": {
                         "title": "List of Certificates",
                         "subtitle": "2018 - 2024"
@@ -602,7 +628,7 @@
             ]
         },
         {
-            "id": "default-home-contact",
+            "id": "default-about-contact",
             "section": "contact-section",
             "section_title": {
                 "title": "Get In Touch!",

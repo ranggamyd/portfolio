@@ -28,7 +28,13 @@ const PortfolioCard = ({ title, category, date, image, path, texts }) => {
                                 <span>{date && date}</span>
                             </div>
                         </div>
-                        <h4 className="title">
+                        <h4
+                            className={`title ${
+                                localStorage.getItem("theme") == "white-version"
+                                    ? "text-dark"
+                                    : ""
+                            }`}
+                        >
                             {title} <Icon name="ArrowUpRight" />
                         </h4>
                     </div>

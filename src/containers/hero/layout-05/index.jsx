@@ -38,9 +38,19 @@ const HeroArea = ({ data, id }) => {
                                                     />
                                                 )}
                                                 {data?.texts?.[0] && (
-                                                    <p className="disc">
-                                                        {data.texts[0].content}
-                                                    </p>
+                                                    <p
+                                                        className="disc"
+                                                        dangerouslySetInnerHTML={{
+                                                            __html: data
+                                                                .texts[0]
+                                                                .content,
+                                                        }}
+                                                        style={{
+                                                            textAlign:
+                                                                "justify",
+                                                            marginTop: "2rem",
+                                                        }}
+                                                    />
                                                 )}
                                             </div>
                                             {data?.items && (
