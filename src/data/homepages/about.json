@@ -16,16 +16,22 @@
             ],
             "images": [
                 {
-                    "src": "../images/bg/bg-image-11.jpg",
+                    "src": "../images/bg/about-bg.JPG",
                     "alt": "Personal Portfolio Images"
                 }
             ],
             "buttons": [
                 {
                     "id": 1,
+                    "path": "#about",
+                    "className": "shadow-none me-5",
+                    "content": "About Me"
+                },
+                {
+                    "id": 2,
                     "path": "#contacts",
                     "className": "shadow-none",
-                    "content": "CONTACT ME"
+                    "content": "Contact"
                 }
             ]
         },
@@ -42,7 +48,7 @@
             ],
             "texts": [
                 {
-                    "content": "Recently gained expertise in Cloud Computing learning path through the <strong>Bangkit by Google, GoTo, and Traveloka</strong>, mastering Cloud Services such as GCR, GKE, GCE, etc. Top Graduated Cohort in Front and Back-end development through the <strong>Dicoding X MSIB Batch 3</strong>"
+                    "content": "Bachelor's Degree in Informatics Engineering with 3 years experience in information technology and services industry. Recently gained expertise in Cloud Computing learning path through the <strong>Bangkit by Google, GoTo, and Traveloka</strong>, mastering Cloud Services such as GCR, GKE, GCE, etc. Top Graduated Cohort in Front and Back-end development through the <strong>Dicoding X MSIB Batch 3</strong>"
                 }
             ],
             "items": [

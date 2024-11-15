@@ -17,6 +17,7 @@ const HeroArea = ({ data, id }) => {
             id={id}
             className="slider-style-6 web-developer height--100 rn-section-gap align-items-center with-particles"
             data-black-overlay="5"
+            style={{ height: "100vh" }}
         >
             <Particles
                 id="particles-js"
@@ -141,10 +142,10 @@ const HeroArea = ({ data, id }) => {
                     />
                 </div>
             )}
-            <div className="wrapper">
+            <div className="wrapper" style={{ minWidth: "90vw" }}>
                 <div className="container">
                     <div className="row">
-                        <div className="banner-inner text-center">
+                        <div className="banner-inner">
                             {data?.headings?.[0] && (
                                 <h1
                                     className="fs--100"

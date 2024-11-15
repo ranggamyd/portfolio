@@ -33,6 +33,7 @@ const AboutPage = ({ data }) => {
     return (
         <Layout pageTitle="Home" className={theme}>
             <Header
+                className="rn-d-none"
                 data={{
                     ...data.header,
                     ...data.navigation,

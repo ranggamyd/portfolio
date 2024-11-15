@@ -18,7 +18,7 @@ const HeroArea = ({ data, id }) => {
             <div className="slide slider-style-3">
                 <div className="container">
                     <div className="row slider-wrapper">
-                        <div className="order-2 order-xl-1 col-lg-12 col-xl-5 mt_lg--50 mt_md--50 mt_sm--50">
+                        <div className="order-2 order-xl-1 col-lg-12 col-xl-7 mt_lg--50 mt_md--50 mt_sm--50">
                             <div className="slider-info">
                                 <div className="row">
                                     <div className="col-xl-12 col-lg-12 col-12">
@@ -110,7 +110,7 @@ const HeroArea = ({ data, id }) => {
                             </div>
                         </div>
 
-                        <div className="order-1 order-xl-2 col-lg-12 col-xl-7">
+                        <div className="order-1 order-xl-2 col-lg-12 col-xl-5">
                             <div className="background-image-area">
                                 {data?.images?.[0].src && (
                                     <div className="thumbnail-image">
@@ -118,7 +118,7 @@ const HeroArea = ({ data, id }) => {
                                             src={data.images[0].src}
                                             alt={
                                                 data.images[0]?.alt ||
-                                                "Personal Portfolio"
+                                                "Myd's Portfolio"
                                             }
                                         />
                                     </div>
