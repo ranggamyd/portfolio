@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { ImageType, TextType } from "@utils/types";
 import Image from "@ui/image";
@@ -8,6 +8,13 @@ import PortfolioModal from "@components/modal-portfolio";
 
 const PortfolioCard = ({ title, category, date, image, path, texts }) => {
     const [show, setShow] = useState(false);
+
+    const [theme, setTheme] = useState("");
+
+    useEffect(() => {
+        setTheme(localStorage.getItem("theme") || "");
+    }, []);
+
     return (
         <>
             <div
@@ -30,9 +37,7 @@ const PortfolioCard = ({ title, category, date, image, path, texts }) => {
                         </div>
                         <h4
                             className={`title ${
-                                localStorage.getItem("theme") == "white-version"
-                                    ? "text-dark"
-                                    : ""
+                                theme == "white-version" ? "text-dark" : ""
                             }`}
                         >
                             {title} <Icon name="ArrowUpRight" />
