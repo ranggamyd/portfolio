@@ -79,7 +79,7 @@ const Header = ({ className, data, theme, toggleTheme }) => {
                 menus={data?.menu}
                 socials={data?.socials}
                 slogan={data?.slogan}
-                logo={data?.logo?.[1]}
+                logo={data?.logo?.[0]}
             />
         </>
     );

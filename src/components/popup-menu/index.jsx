@@ -17,7 +17,7 @@ const PopupMenu = ({ isOpen, onClick, menus, socials, slogan, logo }) => {
                             <li className="nav-item" key={id}>
                                 <Anchor
                                     className="nav-link smoth-animation"
-                                    path={`#${path}`}
+                                    path={`${path}`}
                                     onClick={onClick}
                                 >
                                     {text}
